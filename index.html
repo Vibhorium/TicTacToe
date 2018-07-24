@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="jquery-3.2.1.js"></script>
+<script src="Game.js"></script>
+</head>
+<body>
+<h1 align="center" style="font-family: SansSerif">Lets play TicTacToe!</h1>
+<br>
+<div class="conatiner">
+    <span style="font-size: large; padding-top: 40px; padding-left: 40px; cursor: pointer" id="login_btn"> Login</span>
+    <br><br><br><br>
+    <span style="font-size: large; padding-top: 40px; padding-left: 40px; cursor: pointer" id="signup_btn"> Sign Up!</span>
+    <div class="row" id="login-frame" style="padding-left: 300px">
+    <div class="col-md-4" id="player1"  style="display: none">
+        Player 1 Login<br>
+
+<input type="text" placeholder="Username" id="username1">
+<br><br>
+<input type="text" placeholder="Password" id="password1">
+<br><br>
+
+    </div>
+        <div class="col-md-4" id="player2" style="display: none">
+            Player 2 Login<br>
+
+                <input type="text" placeholder="Username" id="username2">
+                <br><br>
+                <input type="text" placeholder="Password" id="password2">
+                <br><br>
+                <input type="button" id="submitdetails" value="Submit">
+
+        </div>
+        <div class="col-md-4" id="signup" style="display: none">
+            <br>
+            <input type="text" placeholder="Name" id="newname">
+            <br><br>
+            <input type="text" placeholder="Username" id="newusername">
+            <br><br>
+            <input type="text" placeholder="Password" id="newpassword">
+            <br><br>
+                <input type="button" id="submitnew" value="Submit">
+
+        </div>
+    </div>
+    <div class="gamee" style="display: none">
+<div class="row" id="game1" style="padding-top: 20px">
+<div id="1" style="margin-left: 565px; height: 180px; width: 180px; border-right: 2px solid; border-bottom: 2px solid; cursor: pointer"></div>
+    <div id="4" style=" height: 180px; width: 180px; border-right: 2px solid; border-bottom: 2px solid; cursor: pointer"></div>
+    <div id="7" style=" height: 180px; width: 180px; border-bottom: 2px solid; cursor: pointer"></div>
+</div>
+    <div class="row game" id="game2" >
+    <div id="2" style="margin-left: 565px; height: 180px; width: 180px; border-right: 2px solid; border-bottom: 2px solid; cursor: pointer"></div>
+        <div id="5" style="height: 180px; width: 180px; border-right: 2px solid; border-bottom: 2px solid; cursor: pointer"></div>
+        <div id="8" style=" height: 180px; width: 180px; border-bottom: 2px solid; cursor: pointer;"></div>
+    </div>
+    <div class="row game" id="game3" style="">
+        <div id="3" style="margin-left: 565px; height: 180px; width: 180px; border-right: 2px solid; cursor: pointer"></div>
+        <div id="6" style="height: 180px; width: 180px; border-right: 2px solid; cursor: pointer"></div>
+        <div id="9" style=" height: 180px; width: 180px; cursor: pointer"></div>
+    </div>
+
+    </div>
+    <br><br>
+    <span align="center" id="Leaderboard" style="cursor: pointer;">Leaderboard</span>
+<span align="center" id="thanks" style="font-size: large; padding-top: 50px; padding-left:200px; display: none">Thanks for playing!
+<br><br>
+
+</span>
+
+</div>
+<div id="Leaderboardlist"  style="display: none">
+    <h1 align="center">Leaderboard</h1>
+    <table id="leaderlist">
+        <tr>
+            <th>Name</th>
+            <th>Wins</th>
+            <th>Draws</th>
+            <th>Losses</th>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
